@@ -1,0 +1,60 @@
+$c-white: #fff;
+
+.button-bar {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px solid $c-primary;
+  color: $c-primary;
+
+
+  &__button {
+    flex-grow: 1;
+    padding: 0.5rem 0 ;
+    border: 0;
+    background: none;
+
+  }
+
+  > * + * {
+    border-left: 2px solid $c-primary;
+  }
+}
+
+.button-bar__button:hover {
+  background-color: $c-primary;
+}
+
+.button-bar__button:hover {
+  .fa-refresh, .fa-heart, .fa-shopping-cart {
+    color: white;
+  }
+
+
+}
+
+
+//Following few lines say that, when button-bar buttons are hovered over, the dropdown list buttons won't change font color, only the initial button.
+
+.button-bar__button:hover .size {
+  color: $c-white;
+}
+
+.button-bar__button:hover .dropdown__list .size {
+  color: $c-primary;
+}
+
+.dropdown__list .size:hover {
+  font-size: 1rem;
+}
+
+.dropdown__list span:hover {
+  font-size: 1rem;
+}
+
+.button-bar__button .fa {
+  color: $c-primary;
+}
+
+.button-bar__button .size {
+  color: $c-primary;
+}

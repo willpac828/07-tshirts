@@ -1,0 +1,12 @@
+$c-primary: #5eb0d4;
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: .75rem;
+    flex-basis: calc(100% / 3 - 1.5rem);
+    border: 2px solid $c-primary;
+  }
+}

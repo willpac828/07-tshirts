@@ -1,11 +1,92 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
 @import 'box-sizing';
 @import 'resets';
+@import 'grid';
+@import 'main';
+@import 'shop-card';
+@import 'button-bar';
 
-h2 {
-  color: black;
+$c-primary: #5eb0d4;
+$c-white: #fff;
+
+* {
+
+  // color: $c-primary;
+  font-family: sans-serif;
+}
+
+
+.dropdown {
+  position: relative;
+
+  &__list {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    border: 2px solid $c-primary;
+    background: $c-white;
+
+    > * + * {
+      border-top: 2px solid $c-primary;
+    }
+  }
+
+  &__button {
+    padding: 0.25rem 0.5rem;
+
+  }
+}
+
+.dropdown__button:hover {
+  padding:  0.75rem;
+}
+
+// The following line says, "when 'dropdown' is hovered over, look for 'dropdown__list' and make it 'display: block' "
+.dropdown:hover .dropdown__list {
+  display: block;
+}
+
+// .dropdown .fa-square:hover {
+//   .dropdown__button-pink .fa-square {
+//     color: pink;
+//   }
+// }
+//
+// .button-bar__button:hover .dropdown__list {
+//   .dropdown__button-pink .fa-square {
+//     color: pink;
+//   }
+// }
+
+.dropdown__button--pink .fa {
+  color: pink;
+
+}
+
+.dropdown__button--green .fa {
+  color: green;
+}
+
+.dropdown__button--blue .fa {
+  color: blue;
+}
+
+.dropdown__button--yellow .fa {
+  color: yellow;
+}
+
+
+
+
+@media screen and (max-width: 50rem) {
+  .grid {
+    flex-direction: column;
+  }
 }
