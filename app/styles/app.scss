@@ -10,8 +10,12 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'shop-card';
 @import 'button-bar';
 
-$c-primary: #5eb0d4;
+$c-primary: #3473b5;
 $c-white: #fff;
+$c-pink: #e577aa;
+$c-blue: #72bbe9;
+$c-green: #7abe93;
+$c-yellow: #e5b178;
 
 * {
 
@@ -66,27 +70,39 @@ $c-white: #fff;
 // }
 
 .dropdown__button--pink .fa {
-  color: pink;
+  color: $c-pink;
 
 }
 
 .dropdown__button--green .fa {
-  color: green;
+  color: $c-green;
 }
 
 .dropdown__button--blue .fa {
-  color: blue;
+  color: $c-blue;
 }
 
 .dropdown__button--yellow .fa {
-  color: yellow;
+  color: $c-yellow;
 }
 
 
 
 
-@media screen and (max-width: 50rem) {
+@media screen and (max-width: 30rem) {
   .grid {
     flex-direction: column;
   }
+
+  // .button-bar {
+  //   float: right;
+  //   flex-direction: column;
+  // }
+  //
+  // .shop-card {
+  //   display: flex;
+  //   flex-direction: row;
+  //   float: left;
+  // }
+
 }
