@@ -57,6 +57,8 @@ $c-yellow: #e5b178;
   display: block;
 }
 
+
+
 // .dropdown .fa-square:hover {
 //   .dropdown__button-pink .fa-square {
 //     color: pink;
@@ -86,10 +88,33 @@ $c-yellow: #e5b178;
   color: $c-yellow;
 }
 
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .shop-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__pic {
+      max-width: 25%;
+    }
+
+   &__options {
+    align-self: stretch;
+   }
+  }
+
+  .button-bar {
+    height: 100%;
+    flex-direction: column;
+  }
+}
 
 
-
-@media screen and (max-width: 30rem) {
+@media screen and (max-width: 480px) {
   .grid {
     flex-direction: column;
   }

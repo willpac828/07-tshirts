@@ -1,5 +1,6 @@
 .shop-card {
-
+  display: flex;
+  flex-direction: column;
   color: $c-primary;
 
   &__pic {
