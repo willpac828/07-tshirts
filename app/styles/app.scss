@@ -10,7 +10,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'shop-card';
 @import 'button-bar';
 
-$c-primary: #3473b5;
+$c-primary: #5eb0d4;
 $c-white: #fff;
 $c-pink: #e577aa;
 $c-blue: #72bbe9;
@@ -54,7 +54,9 @@ $c-yellow: #e5b178;
 
 // The following line says, "when 'dropdown' is hovered over, look for 'dropdown__list' and make it 'display: block' "
 .dropdown:hover .dropdown__list {
-  display: block;
+  display: flex;
+  flex-direction: column;
+
 }
 
 
@@ -102,15 +104,53 @@ $c-yellow: #e5b178;
       max-width: 25%;
     }
 
-   &__options {
-    align-self: stretch;
+    &__options {
+      align-self: stretch;
+
    }
   }
 
   .button-bar {
-    height: 100%;
     flex-direction: column;
+    height: 100%;
+    border-top: hidden;
+    border-left: 2px solid $c-primary;
+
+    > * + * {
+      border-top: 2px solid $c-primary;
+    }
+
+    &__button {
+      border-left: hidden;
+    }
   }
+
+  .dropdown__list {
+    display: none;
+    right: 100%;
+    bottom: auto; //undo bottom
+    left: auto;   //need to undo for the media query
+    transform: translateX(0); //undo translateX
+    transform: translateY(-75%);
+
+
+    > * + * {
+      border-top: none;
+      border-left: 2px solid $c-primary;
+    }
+
+  }
+
+
+
+
+
+  .dropdown:hover .dropdown__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+
 }
 
 
